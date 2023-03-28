@@ -42,7 +42,7 @@
     "*.md",
     "package.json"
   ],
-  "author": "chen.yin",
+  "author": "chenyin911",
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "@types/jest": "^24.0.11",
