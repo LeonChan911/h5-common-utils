@@ -1,6 +1,6 @@
 {
   "name": "h5-common-utils",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "sideEffects": false,
   "description": "",
   "scripts": {
@@ -42,7 +42,7 @@
     "*.md",
     "package.json"
   ],
-  "author": "chenyin911",
+  "author": "chenyin",
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "@types/jest": "^24.0.11",
