@@ -17,12 +17,20 @@
     "release:patch": "standard-version --releaseAs patch",
     "release:minor": "standard-version --releaseAs minor",
     "release:major": "standard-version --releaseAs major",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "commit": "git-cz",
+    "pub": "yarn build-prod && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/LeonChan911/h5-common-utils"
   },
+  "keywords": [
+    "WebGL",
+    "UrlSearch",
+    "UiTool",
+    "Price"
+  ],
   "homepage": "",
   "main": "dist/index.js",
   "module": "es/index.js",
@@ -39,6 +47,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@types/jest": "^24.0.11",
     "dts-bundle": "^0.7.3",
+    "git-cz": "^4.9.0",
     "jest": "^24.7.1",
     "rollup": "^0.66.6",
     "rollup-plugin-commonjs": "^9.2.1",
