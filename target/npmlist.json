@@ -1,0 +1,50 @@
+{
+  "name": "h5-common-utils",
+  "version": "1.0.0",
+  "dependencies": {
+    "@types/cookie": { "version": "0.4.0" },
+    "@types/qs": { "version": "6.9.6" },
+    "@types/url-parse": { "version": "1.4.3" },
+    "axios": {
+      "version": "0.21.1",
+      "dependencies": { "follow-redirects": { "version": "1.14.0" } }
+    },
+    "cookie": { "version": "0.4.1" },
+    "qs": {
+      "version": "6.10.1",
+      "dependencies": {
+        "side-channel": {
+          "version": "1.0.4",
+          "dependencies": {
+            "call-bind": {
+              "version": "1.0.2",
+              "dependencies": {
+                "function-bind": { "version": "1.1.1" },
+                "get-intrinsic": { "version": "1.1.1" }
+              }
+            },
+            "get-intrinsic": {
+              "version": "1.1.1",
+              "dependencies": {
+                "function-bind": { "version": "1.1.1" },
+                "has": {
+                  "version": "1.0.3",
+                  "dependencies": { "function-bind": { "version": "1.1.1" } }
+                },
+                "has-symbols": { "version": "1.0.1" }
+              }
+            },
+            "object-inspect": { "version": "1.10.3" }
+          }
+        }
+      }
+    },
+    "url-parse": {
+      "version": "1.5.1",
+      "dependencies": {
+        "querystringify": { "version": "2.2.0" },
+        "requires-port": { "version": "1.0.0" }
+      }
+    }
+  }
+}
