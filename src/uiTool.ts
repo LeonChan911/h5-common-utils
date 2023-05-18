@@ -86,3 +86,30 @@ export function columnToRow<T>(columns: T[]) {
     right,
   };
 }
+
+export const hColor2RGB = (hexColor: string, opacity: number) => {
+  if (hexColor.slice(0, 1) === '#') {
+    if (hexColor.length > 4) {
+      const r = parseInt(hexColor.substring(1, 3), 16);
+      const g = parseInt(hexColor.substring(3, 5), 16);
+      const b = parseInt(hexColor.substring(5, 7), 16);
+      return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    } else {
+      const r = parseInt(
+        `${hexColor.substring(1, 2)}${hexColor.substring(1, 2)}`,
+        16
+      );
+      const g = parseInt(
+        `${hexColor.substring(2, 3)}${hexColor.substring(2, 3)}`,
+        16
+      );
+      const b = parseInt(
+        `${hexColor.substring(3, 4)}${hexColor.substring(3, 4)}`,
+        16
+      );
+      return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    }
+  } else {
+    return hexColor;
+  }
+};
