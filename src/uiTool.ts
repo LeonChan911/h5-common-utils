@@ -87,6 +87,15 @@ export function columnToRow<T>(columns: T[]) {
   };
 }
 
+/**
+ * @description: 16进制转RGB
+ * @param {
+*          hexColor: string;
+*          opacity: number;
+*       }
+* @return string;
+*/
+
 export const hColor2RGB = (hexColor: string, opacity: number) => {
   if (hexColor.slice(0, 1) === '#') {
     if (hexColor.length > 4) {
@@ -112,4 +121,30 @@ export const hColor2RGB = (hexColor: string, opacity: number) => {
   } else {
     return hexColor;
   }
+};
+
+/**
+ * @description: requestAnimationFrame的封装
+ * @param {
+*          fn: () => void;
+*          delay: number;
+*       }
+* @return () => void)
+*/
+
+export const setTimeOuts = (fn: () => void, delay: number): (() => void) => {
+  let timer: number;
+  const stime = +new Date();
+  const loop = () => {
+    const etime = +new Date();
+    if (stime + delay <= etime) {
+      fn();
+      return;
+    }
+    timer = requestAnimationFrame(loop);
+  };
+  timer = requestAnimationFrame(loop);
+  return () => {
+    cancelAnimationFrame(timer);
+  };
 };
