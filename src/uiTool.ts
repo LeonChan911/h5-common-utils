@@ -208,3 +208,8 @@ export const animationAndKeyFrame = ({
   }
   return str;
 };
+
+const defaultScreenWidth = 375;
+export const pxToVw = (px: number) => {
+  return `${(px / defaultScreenWidth) * 100}vw`;
+};
